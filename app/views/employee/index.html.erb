@@ -1,0 +1,8 @@
+<h1>Employees List</h1>
+
+   <% @employees.each do |employee| %> 
+        <p><%= employee.first_name %></p>
+        <p><%= employee.last_name %> </p>
+        <p><%= "%.2f" % employee.salary %> </p>
+        <p>==================================</p>
+   <% end %>
