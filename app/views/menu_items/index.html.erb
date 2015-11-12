@@ -1,0 +1,14 @@
+<h1>Today's Menu Items</h1>
+
+<% @menu_items.each do |item| %>
+
+Item: <%= item.name %>
+<br>
+Calores: <%= item.calories %>
+<br>
+Price: $<%= item.price %>
+<br>
+Number Sold: <%= item.sold_counter %>
+<br>
+<p>=============</p>
+<%end%>

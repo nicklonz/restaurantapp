@@ -1,0 +1,23 @@
+<%= form_for(@menu_item) do |form| %>
+  <p>
+    Item Name:
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    Calories:
+    <%= form.text_field :calories %>
+  </p>
+
+  <p>
+    Price:
+    <%= form.text_field :price %>
+  </p>
+
+  <p>
+    Sold:
+    <%= form.text_field :sold_counter %>
+  </p>
+
+  <%= form.submit "Add Item" %>
+<% end %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-    resources :employee
+    resources :employees
+    resources :menu_items
     get '/welcome' => 'welcome#greeting'
 end
