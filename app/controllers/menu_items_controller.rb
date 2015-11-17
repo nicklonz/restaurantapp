@@ -22,7 +22,8 @@ class MenuItemsController < ApplicationController
   end
 
     def update
-    @menu_item = MenuItem.new(menu_item_params)
+    @menu_item = MenuItem.find(params[:id])
+    @menu_item.update_attributes(menu_item_params)
     if @menu_item.save 
       redirect_to menu_items_path
     else
@@ -31,7 +32,7 @@ class MenuItemsController < ApplicationController
   end
 
   def show
-    @menu_items = MenuItem.all
+  @menu_item = MenuItem.find(params[:id])
   end
 
   private

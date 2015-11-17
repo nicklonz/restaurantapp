@@ -1,5 +1,8 @@
 <h1>Today's Menu Items</h1>
 
+<%= link_to 'Create a New Item', new_menu_item_path%>
+<br><br>
+
 <% @menu_items.each do |item| %>
 
 Item: <%= item.name %>
@@ -10,5 +13,8 @@ Price: $<%= item.price %>
 <br>
 Number Sold: <%= item.sold_counter %>
 <br>
+<br> 
+<%= link_to "Edit This item", edit_menu_item_path(item: @item.id) %>
 <p>=============</p>
+
 <%end%>
