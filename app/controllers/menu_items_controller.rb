@@ -11,6 +11,7 @@ class MenuItemsController < ApplicationController
   def create
     @menu_item = MenuItem.new(menu_item_params)
     if @menu_item.save 
+      flash[:notice] = 'Item Saved!'
       redirect_to menu_items_path
     else
       render :new
@@ -18,13 +19,14 @@ class MenuItemsController < ApplicationController
   end
 
   def edit
-    @menu_items = MenuItem.find(params[:id])
+    @menu_item = MenuItem.find(params[:id])
   end
 
     def update
     @menu_item = MenuItem.find(params[:id])
     @menu_item.update_attributes(menu_item_params)
     if @menu_item.save 
+      flash[:notice] = 'Item Updated'
       redirect_to menu_items_path
     else
       render :edit

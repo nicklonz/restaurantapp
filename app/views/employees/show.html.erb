@@ -1,0 +1,12 @@
+<h1>Employee List</h1>
+
+<% @employees.each do |employee| %>
+
+First Name: <%= employee.first_name %>
+<br>
+Last Name: <%= employee.last_name %>
+<br>
+Salary: $<%= employee.salary %>
+<br>
+<p>=============</p>
+<%end%>

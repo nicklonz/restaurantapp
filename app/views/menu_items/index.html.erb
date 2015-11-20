@@ -1,3 +1,6 @@
+<%= flash[:notice] %>
+<br>
+<br>
 <h1>Today's Menu Items</h1>
 
 <%= link_to 'Create a New Item', new_menu_item_path%>
@@ -5,16 +8,28 @@
 
 <% @menu_items.each do |item| %>
 
-Item: <%= item.name %>
-<br>
-Calores: <%= item.calories %>
-<br>
-Price: $<%= item.price %>
-<br>
-Number Sold: <%= item.sold_counter %>
-<br>
+<p>
+Item: 
+<%= link_to item.name, menu_item_path(item) %>
+</p>
+
+<p>
+Calores: 
+<%= item.calories %>
+</p>
+
+<p>
+Price: 
+$<%= item.price %>
+</p>
+
+<p>
+Number Sold: 
+<%= item.sold_counter %>
+</p>
+
 <br> 
-<%= link_to "Edit This item", edit_menu_item_path(item: @item.id) %>
+<%= link_to "Edit This item"%>
 <p>=============</p>
 
 <%end%>

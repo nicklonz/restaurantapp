@@ -1,14 +1,29 @@
-<h1>Today's Menu Items</h1>
+<!--  <h1>Today's Menu Items</h1>
 
-<% @menu_items.each do |item| %>
+<%# @menu_items.each do |item| %>
 
-Item: <%= item.name %>
+Item: <%#= item.name %>
 <br>
-Calores: <%= item.calories %>
+Calores: <%#= item.calories %>
 <br>
-Price: $<%= item.price %>
+Price: $<%#= item.price %>
 <br>
-Number Sold: <%= item.sold_counter %>
+Number Sold: <%#= item.sold_counter %>
 <br>
 <p>=============</p>
-<%end%>
+<%#end%>
+ -->
+
+ <p> This item is</p>
+
+ Item Name: <%= @menu_item.name %>
+ <br>
+ Calories : <%= @menu_item.calories %>
+ <br>
+
+Price: $<%= @menu_item.price %>
+<br>
+Number Sold: <%= @menu_item.sold_counter %>
+<br>
+
+<%= link_to 'Edit this item', edit_menu_item_path(@menu_item) %>
